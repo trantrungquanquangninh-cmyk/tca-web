@@ -14,7 +14,7 @@ Chỉnh sửa các tệp trên rồi triển khai lại cùng Site. Đây là we
 
 ## Liên hệ
 
-Điện thoại: 0433 871 998 (liên kết gọi quốc tế +61 433 871 998). Facebook: https://www.facebook.com/profile.php?id=61572352225648. Cập nhật các thông tin này trong `contactLinks` tại `dist/app.js`. Phần liên hệ cho phép gọi điện, mở Facebook, chọn hình thức học và sao chép tin nhắn để tự gửi qua Facebook. Học phí và lịch học chưa công bố.
+WhatsApp: 0433 871 998, liên kết https://wa.me/61433871998. Facebook: https://www.facebook.com/profile.php?id=61572352225648. Cập nhật các thông tin này trong `contactLinks` tại `dist/app.js` và số WhatsApp trong `updateWhatsApp`. Phần liên hệ mở WhatsApp kèm nội dung tư vấn theo hình thức học đã chọn, hoặc mở Facebook để người dùng tự gửi tin nhắn đã sao chép. Website không tự gửi tin nhắn. Học phí và lịch học chưa công bố.
 
 ## Nguồn nội dung
 

@@ -21,23 +21,32 @@ for (const [i, [title, items]] of lessons.entries()) {
 const menu = document.querySelector('.menu'); const nav = document.querySelector('nav');
 menu.addEventListener('click', () => { const open = menu.getAttribute('aria-expanded') !== 'true'; menu.setAttribute('aria-expanded', String(open)); nav.classList.toggle('open', open); });
 nav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => { menu.setAttribute('aria-expanded','false'); nav.classList.remove('open'); }));
-document.querySelectorAll('[data-format]').forEach(a => a.addEventListener('click', () => { document.querySelector('#interest').value = a.dataset.format; }));
+document.querySelectorAll('[data-format]').forEach(a => a.addEventListener('click', () => { document.querySelector('#interest').value = a.dataset.format; updateWhatsApp(); }));
 document.querySelector('#year').textContent = new Date().getFullYear();
 const contact = document.querySelector('#contact-action');
 const contactLinks = [
- { label: 'Gọi TCA: 0433 871 998', href: 'tel:+61433871998' },
+ { label: 'WhatsApp: 0433 871 998 ↗', href: 'https://wa.me/61433871998', external: true, whatsapp: true },
  { label: 'Facebook TCA Group ↗', href: 'https://www.facebook.com/profile.php?id=61572352225648', external: true }
 ];
 for (const item of contactLinks) {
  const link = document.createElement('a'); link.textContent = item.label; link.href = item.href;
+ if (item.whatsapp) link.id = 'whatsapp-contact';
  if (item.external) { link.target = '_blank'; link.rel = 'noopener noreferrer'; }
  contact.append(link);
 }
 const contactHint = document.createElement('p');
-contactHint.textContent = 'Gọi trực tiếp hoặc sao chép nội dung tư vấn và gửi qua Facebook của TCA Group.';
+contactHint.textContent = 'Nhắn qua WhatsApp với nội dung tư vấn có sẵn, hoặc sao chép nội dung và gửi qua Facebook của TCA Group.';
 contact.append(contactHint);
+function consultationMessage() {
+ return `Xin chào TCA Group, tôi muốn tìm hiểu khóa Revit ứng dụng & dự toán xây dựng tại Úc. Hình thức quan tâm: ${document.querySelector('#interest').value}. Nhờ TCA tư vấn lộ trình, lịch học và học phí. Cảm ơn TCA!`;
+}
+function updateWhatsApp() {
+ document.querySelector('#whatsapp-contact').href = `https://wa.me/61433871998?text=${encodeURIComponent(consultationMessage())}`;
+}
+document.querySelector('#interest').addEventListener('change', updateWhatsApp);
+updateWhatsApp();
 document.querySelector('#copy-request').addEventListener('click', async () => {
- const content = `Xin chào TCA Group, tôi muốn tìm hiểu khóa Revit ứng dụng & dự toán xây dựng tại Úc. Hình thức quan tâm: ${document.querySelector('#interest').value}. Nhờ TCA tư vấn lộ trình, lịch học và học phí. Cảm ơn TCA!`;
+ const content = consultationMessage();
  const status = document.querySelector('#copy-status');
  try { await navigator.clipboard.writeText(content); status.textContent = 'Đã sao chép nội dung. Chưa có thông tin nào được gửi đi.'; }
  catch { status.textContent = content; }
