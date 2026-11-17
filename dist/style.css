@@ -16,3 +16,4 @@
 @media(max-width:700px){.brand{gap:10px}.brand svg{width:36px;height:43px}.brand>span{font-size:30px}.brand small{font-size:6.8px;letter-spacing:.8px;margin-top:6px}}
 .lesson-gallery-wide{grid-template-columns:1fr;gap:24px}
 .lesson-video{display:block;width:100%;height:auto;aspect-ratio:2194/956;object-fit:contain;background:#102e47;border:1px solid var(--line)}.video-download{display:inline-block;margin-top:12px;font-size:13px;font-weight:600;text-decoration:underline;text-underline-offset:3px}.video-download:hover{color:var(--orange)}
+.instructor-support{margin:0 0 26px;padding:16px 18px;background:#f6f7f5;border-left:3px solid var(--orange)}.instructor-support p{font-size:13px;line-height:1.85;color:var(--muted)}.instructor-support p+p{margin-top:6px}.instructor-support strong{color:var(--ink);font-weight:600}
