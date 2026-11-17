@@ -16,7 +16,26 @@ for (const [i, [title, items]] of lessons.entries()) {
  const plus = document.createElement('span'); plus.className = 'expand'; plus.setAttribute('aria-hidden','true'); plus.textContent = '+';
  summary.append(number, heading, plus); const list = document.createElement('ul');
  for (const item of items) { const li = document.createElement('li'); li.textContent = item; list.append(li); }
- detail.append(summary, list); document.querySelector('#lessons').append(detail);
+ detail.append(summary, list);
+ if (i === 1) {
+  const visual = document.createElement('section'); visual.className = 'lesson-visual'; visual.setAttribute('aria-label', 'Minh họa bản vẽ 2D và mô hình 3D');
+  const visualHeading = document.createElement('h4'); visualHeading.textContent = 'Từ bản vẽ 2D → Mô hình 3D';
+  const visualIntro = document.createElement('p'); visualIntro.textContent = 'Minh họa cách đọc bản vẽ và hình dung các cấu kiện trong không gian.';
+  const gallery = document.createElement('div'); gallery.className = 'lesson-gallery';
+  for (const photo of [
+   { src: 'assets/lesson-02-plan.png', title: '01 / Bản vẽ mặt bằng 2D', alt: 'Bản vẽ mặt bằng 2D với bố trí phòng, kích thước và ghi chú kỹ thuật', width: 1185, height: 1478 },
+   { src: 'assets/lesson-02-model.png', title: '02 / Mô hình cấu tạo 3D', alt: 'Mô hình 3D tách lớp mái, tầng trên, kết cấu sàn và tầng trệt của nhà hai tầng', width: 1251, height: 1122 }
+  ]) {
+   const figure = document.createElement('figure');
+   const link = document.createElement('a'); link.href = photo.src; link.target = '_blank'; link.rel = 'noopener noreferrer'; link.setAttribute('aria-label', `${photo.title} — mở ảnh kích thước đầy đủ trong tab mới`);
+   const img = document.createElement('img'); img.src = photo.src; img.alt = photo.alt; img.width = photo.width; img.height = photo.height; img.loading = 'lazy';
+   const caption = document.createElement('figcaption'); caption.textContent = photo.title;
+   const hint = document.createElement('span'); hint.className = 'image-open-hint'; hint.textContent = 'Xem ảnh lớn ↗';
+   link.append(img, hint); figure.append(link, caption); gallery.append(figure);
+  }
+  visual.append(visualHeading, visualIntro, gallery); detail.append(visual);
+ }
+ document.querySelector('#lessons').append(detail);
 }
 const menu = document.querySelector('.menu'); const nav = document.querySelector('nav');
 menu.addEventListener('click', () => { const open = menu.getAttribute('aria-expanded') !== 'true'; menu.setAttribute('aria-expanded', String(open)); nav.classList.toggle('open', open); });
