@@ -6,3 +6,4 @@
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
 
 #contact-action>a{display:block;font-size:13px;font-weight:600;padding:8px 0}#contact-action>p{margin-top:8px}
+.founder-portrait{margin:0;padding:0;overflow:hidden;background:#f4f5f3;border-color:#ffffff36;width:100%;max-width:380px}.founder-portrait>img{display:block;width:100%;height:auto;object-fit:contain}.founder-portrait .founder-art-bottom{background:#173a54;padding:20px 24px;border-top:2px solid var(--orange);color:#fff}.founder-portrait .founder-art-bottom span{font-size:9px;letter-spacing:.7px}
