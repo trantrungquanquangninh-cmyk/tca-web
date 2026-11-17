@@ -14,3 +14,4 @@
 .brand{gap:13px;flex-shrink:0}.brand svg{width:49px;height:57px}.brand>span{font-size:36px}.brand small{font-size:8px;letter-spacing:1.2px;margin-top:8px}
 @media(min-width:701px) and (max-width:1100px){.brand svg{width:42px;height:49px}.brand>span{font-size:31px}.brand small{font-size:7px;letter-spacing:1px}}
 @media(max-width:700px){.brand{gap:10px}.brand svg{width:36px;height:43px}.brand>span{font-size:30px}.brand small{font-size:6.8px;letter-spacing:.8px;margin-top:6px}}
+.lesson-gallery-wide{grid-template-columns:1fr;gap:24px}
