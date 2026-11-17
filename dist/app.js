@@ -42,6 +42,17 @@ for (const [i, [title, items]] of lessons.entries()) {
   }
   visual.append(visualHeading, visualIntro, gallery); detail.append(visual);
  }
+ if (i === 7) {
+  const visual = document.createElement('section'); visual.className = 'lesson-visual'; visual.setAttribute('aria-label', 'Video mô phỏng thi công bằng Blender');
+  const videoHeading = document.createElement('h4'); videoHeading.textContent = 'Trực quan hóa trình tự thi công';
+  const intro = document.createElement('p'); intro.textContent = 'Video minh họa mô phỏng quá trình xây dựng trong nội dung Blender. Bấm phát để xem, hoặc mở toàn màn hình để theo dõi chi tiết.';
+  const video = document.createElement('video'); video.className = 'lesson-video'; video.controls = true; video.playsInline = true; video.preload = 'none'; video.poster = 'assets/construction-animation-poster.jpg'; video.width = 2194; video.height = 956; video.setAttribute('aria-label', 'Construction animation — mô phỏng quá trình xây dựng, 3 phút 06 giây');
+  const source = document.createElement('source'); source.src = 'assets/construction-animation.mp4'; source.type = 'video/mp4'; video.append(source);
+  const fallback = document.createElement('a'); fallback.href = source.src; fallback.textContent = 'Mở video mô phỏng thi công'; video.append(fallback);
+  const download = document.createElement('a'); download.className = 'video-download'; download.href = source.src; download.target = '_blank'; download.rel = 'noopener noreferrer'; download.textContent = 'Mở video trong tab mới ↗';
+  visual.append(videoHeading, intro, video, download); detail.append(visual);
+  detail.addEventListener('toggle', () => { if (!detail.open) video.pause(); });
+ }
  document.querySelector('#lessons').append(detail);
 }
 const menu = document.querySelector('.menu'); const nav = document.querySelector('nav');
