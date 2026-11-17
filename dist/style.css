@@ -7,3 +7,5 @@
 
 #contact-action>a{display:block;font-size:13px;font-weight:600;padding:8px 0}#contact-action>p{margin-top:8px}
 .founder-portrait{margin:0;padding:0;overflow:hidden;background:#f4f5f3;border-color:#ffffff36;width:100%;max-width:380px}.founder-portrait>img{display:block;width:100%;height:auto;object-fit:contain}.founder-portrait .founder-art-bottom{background:#173a54;padding:20px 24px;border-top:2px solid var(--orange);color:#fff}.founder-portrait .founder-art-bottom span{font-size:9px;letter-spacing:.7px}
+.lesson summary{padding:25px 0;line-height:1.65}.lesson-number{font-size:18px;width:30px}.lesson-title{font-size:18px;font-weight:600}.lesson summary .expand{font-size:26px}.lesson ul{font-size:16px;line-height:1.85;margin-left:50px;margin-bottom:28px}.lesson li{padding:5px 0}.syllabus-aside>.eyebrow{font-size:11px}.syllabus-aside>p{font-size:14px;line-height:1.8}
+@media(max-width:700px){.lesson summary{gap:12px;padding:22px 0}.lesson-number{font-size:17px;width:25px}.lesson-title{font-size:17px}.lesson ul{font-size:16px;margin-left:37px;padding-left:14px}.syllabus-aside>p{font-size:14px}}
