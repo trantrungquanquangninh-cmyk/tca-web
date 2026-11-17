@@ -17,17 +17,20 @@ for (const [i, [title, items]] of lessons.entries()) {
  summary.append(number, heading, plus); const list = document.createElement('ul');
  for (const item of items) { const li = document.createElement('li'); li.textContent = item; list.append(li); }
  detail.append(summary, list);
- if (i === 1 || i === 2) {
-  const visual = document.createElement('section'); visual.className = 'lesson-visual'; visual.setAttribute('aria-label', i === 1 ? 'Minh họa bản vẽ 2D và mô hình 3D' : 'Minh họa quản lý thông tin và cấu kiện trong Revit');
-  const visualHeading = document.createElement('h4'); visualHeading.textContent = i === 1 ? 'Từ bản vẽ 2D → Mô hình 3D' : 'Hiểu thông tin. Quản lý mô hình.';
-  const visualIntro = document.createElement('p'); visualIntro.textContent = i === 1 ? 'Minh họa cách đọc bản vẽ và hình dung các cấu kiện trong không gian.' : 'Minh họa Project Parameters và cách thể hiện cấu kiện khung tường trong mô hình Revit.';
-  const gallery = document.createElement('div'); gallery.className = i === 2 ? 'lesson-gallery lesson-gallery-wide' : 'lesson-gallery';
+ if (i >= 1 && i <= 3) {
+  const visual = document.createElement('section'); visual.className = 'lesson-visual'; visual.setAttribute('aria-label', i === 1 ? 'Minh họa bản vẽ 2D và mô hình 3D' : i === 2 ? 'Minh họa quản lý thông tin và cấu kiện trong Revit' : 'Minh họa Phasing và Design Options trong Revit');
+  const visualHeading = document.createElement('h4'); visualHeading.textContent = i === 1 ? 'Từ bản vẽ 2D → Mô hình 3D' : i === 2 ? 'Hiểu thông tin. Quản lý mô hình.' : 'Theo dõi giai đoạn. So sánh phương án.';
+  const visualIntro = document.createElement('p'); visualIntro.textContent = i === 1 ? 'Minh họa cách đọc bản vẽ và hình dung các cấu kiện trong không gian.' : i === 2 ? 'Minh họa Project Parameters và cách thể hiện cấu kiện khung tường trong mô hình Revit.' : 'Hình dung sự thay đổi từ hiện trạng đến hoàn thiện và đối chiếu các phương án thiết kế trong Revit.';
+  const gallery = document.createElement('div'); gallery.className = i >= 2 ? 'lesson-gallery lesson-gallery-wide' : 'lesson-gallery';
   const photos = i === 1 ? [
    { src: 'assets/lesson-02-plan.png', title: '01 / Bản vẽ mặt bằng 2D', alt: 'Bản vẽ mặt bằng 2D với bố trí phòng, kích thước và ghi chú kỹ thuật', width: 1185, height: 1478 },
    { src: 'assets/lesson-02-model.png', title: '02 / Mô hình cấu tạo 3D', alt: 'Mô hình 3D tách lớp mái, tầng trên, kết cấu sàn và tầng trệt của nhà hai tầng', width: 1251, height: 1122 }
-  ] : [
+  ] : i === 2 ? [
    { src: 'assets/lesson-03-parameters.png', title: '01 / Project Parameters trong Revit', alt: 'Infographic về Project Parameters: tạo và quản lý thuộc tính, ví dụ tham số cửa và ứng dụng dữ liệu trong Revit', width: 1300, height: 866 },
    { src: 'assets/lesson-03-framing.png', title: '02 / Cấu kiện khung tường trong mô hình', alt: 'Mô hình Revit với khung tường được tô vàng, góc nhìn 3D toàn công trình, tách cấu kiện và mặt đứng có kích thước', width: 2134, height: 1328 }
+  ] : [
+   { src: 'assets/lesson-04-phasing.png', title: '01 / Phasing: Hiện trạng → Hoàn thiện', alt: 'Hai góc nhìn 3D công trình so sánh giai đoạn hiện trạng và hoàn thiện', width: 2773, height: 1050 },
+   { src: 'assets/lesson-04-design-options.png', title: '02 / Design Options: So sánh phương án thiết kế', alt: 'Mô hình nhà hai tầng đối chiếu Option 01 và Option 02 với các phương án mái khác nhau', width: 2757, height: 1030 }
   ];
   for (const photo of photos) {
    const figure = document.createElement('figure');
