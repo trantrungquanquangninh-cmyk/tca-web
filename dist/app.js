@@ -42,6 +42,18 @@ for (const [i, [title, items]] of lessons.entries()) {
   }
   visual.append(visualHeading, visualIntro, gallery); detail.append(visual);
  }
+ if (i === 5 || i === 6) {
+  const visual = document.createElement('section'); visual.className = 'lesson-visual';
+  const visualHeading = document.createElement('h4'); visualHeading.textContent = i === 5 ? 'AI Toolbox: Công cụ hỗ trợ công việc kỹ sư' : 'Web App: Quản lý công cụ và dữ liệu';
+  const intro = document.createElement('p'); intro.textContent = i === 5 ? 'Giao diện minh họa các công cụ tự động hóa cho bản vẽ, kết cấu và dự toán.' : 'Giao diện minh họa tải lên, kiểm tra, quản lý phiên bản và trạng thái hiển thị của công cụ trên Web App.';
+  const gallery = document.createElement('div'); gallery.className = 'lesson-gallery lesson-gallery-wide';
+  const figure = document.createElement('figure');
+  const link = document.createElement('a'); link.href = i === 5 ? 'assets/lesson-06-ai-toolbox.png' : 'assets/lesson-07-tool-management.png'; link.target = '_blank'; link.rel = 'noopener noreferrer'; link.setAttribute('aria-label', `${visualHeading.textContent} — mở ảnh kích thước đầy đủ trong tab mới`);
+  const img = document.createElement('img'); img.src = link.getAttribute('href'); img.alt = i === 5 ? 'Ảnh giao diện AI Toolbox cho kỹ sư với danh sách công cụ xử lý bản vẽ CAD, PDF và dự toán' : 'Ảnh giao diện quản lý tool: tải gói công cụ, kiểm tra, quản lý phiên bản, ẩn và xóa công cụ'; img.width = i === 5 ? 1837 : 1838; img.height = i === 5 ? 1307 : 1285; img.loading = 'lazy';
+  const hint = document.createElement('span'); hint.className = 'image-open-hint'; hint.textContent = 'Xem ảnh lớn ↗';
+  const caption = document.createElement('figcaption'); caption.textContent = i === 5 ? 'Minh họa / Kho công cụ AI Toolbox cho kỹ sư' : 'Minh họa / Trang quản lý công cụ trên Web App';
+  link.append(img, hint); figure.append(link, caption); gallery.append(figure); visual.append(visualHeading, intro, gallery); detail.append(visual);
+ }
  if (i === 7) {
   const visual = document.createElement('section'); visual.className = 'lesson-visual'; visual.setAttribute('aria-label', 'Video mô phỏng thi công bằng Blender');
   const videoHeading = document.createElement('h4'); videoHeading.textContent = 'Trực quan hóa trình tự thi công';
