@@ -87,6 +87,9 @@ const contactHint = document.createElement('p');
 contactHint.textContent = 'Nhắn qua WhatsApp với nội dung tư vấn có sẵn, hoặc sao chép nội dung và gửi qua Facebook của TCA Group.';
 contact.append(contactHint);
 function consultationMessage() {
+ if (document.querySelector('#interest').value === 'Thử thách thực tế: Dự toán với Revit & AI') {
+  return 'Xin chào TCA Group, tôi quan tâm phần Thử thách thực tế: Dự toán với Revit & AI. Tôi muốn nhận bài toán ứng dụng Revit và AI vào dự toán, hướng tới thay thế thao tác bóc tách thủ công trong quy trình CostX, CAD, Bluebeam và Excel. Nhờ TCA tư vấn cách tham gia và yêu cầu đầu vào. Cảm ơn TCA!';
+ }
  if (document.querySelector('#interest').value === 'Nâng cấp tư duy dự toán — 2 buổi / $400') {
   return 'Xin chào TCA Group, tôi quan tâm chương trình Nâng cấp tư duy dự toán — 2 buổi / $400, tư vấn trực tiếp cùng Senior Estimator. Tôi muốn được định hướng cải thiện công việc, nâng cao năng lực và trao đổi về mục tiêu phát triển nghề nghiệp. Nhờ TCA tư vấn lịch học và cách đăng ký. Cảm ơn TCA!';
  }
