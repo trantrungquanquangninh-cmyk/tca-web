@@ -87,6 +87,9 @@ const contactHint = document.createElement('p');
 contactHint.textContent = 'Nhắn qua WhatsApp với nội dung tư vấn có sẵn, hoặc sao chép nội dung và gửi qua Facebook của TCA Group.';
 contact.append(contactHint);
 function consultationMessage() {
+ if (document.querySelector('#interest').value === 'Nâng cấp tư duy dự toán — 2 buổi / $400') {
+  return 'Xin chào TCA Group, tôi quan tâm chương trình Nâng cấp tư duy dự toán — 2 buổi / $400, tư vấn trực tiếp cùng Senior Estimator. Tôi muốn được định hướng cải thiện công việc, nâng cao năng lực và trao đổi về mục tiêu phát triển nghề nghiệp. Nhờ TCA tư vấn lịch học và cách đăng ký. Cảm ơn TCA!';
+ }
  return `Xin chào TCA Group, tôi muốn tìm hiểu khóa Revit ứng dụng & dự toán xây dựng tại Úc. Hình thức quan tâm: ${document.querySelector('#interest').value}. Nhờ TCA tư vấn lộ trình, lịch học và học phí. Cảm ơn TCA!`;
 }
 function updateWhatsApp() {
