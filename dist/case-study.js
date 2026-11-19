@@ -44,3 +44,21 @@ document.querySelectorAll('[data-stair-stage]').forEach(button => {
   document.querySelectorAll('[data-stair-stage]').forEach(item => item.setAttribute('aria-pressed', String(item === button)));
  });
 });
+const siteStages = {
+ '1': { alt: 'Sơ đồ tầng 12: thang máy hàng, tuyến vận chuyển, điểm tập kết và các khu A, B', caption: 'Làm rõ tuyến vận chuyển và vị trí tập kết trước khi chọn quy cách vật tư. Bấm hình để xem lớn.' },
+ '2': { alt: 'Sơ đồ phân khu thi công: đội A triển khai khu A, khu B chờ điều phối, vật tư cấp theo đợt', caption: 'Phân khu và trình tự dự kiến để cùng Site Manager rà soát. Bấm hình để xem lớn.' },
+ '3': { alt: 'Sơ đồ briefing cho đội mới: rà soát khu A trước khi chuyển bước và hướng dẫn phạm vi tại khu B', caption: 'Dùng chung hình ảnh và phiên bản để briefing đội mới, xác nhận phạm vi và bước tiếp theo. Bấm hình để xem lớn.' }
+};
+document.querySelectorAll('[data-site-stage]').forEach(button => {
+ button.addEventListener('click', () => {
+  const key = button.dataset.siteStage;
+  const stage = siteStages[key];
+  if (!stage) return;
+  const image = document.querySelector('#site-model');
+  image.src = `assets/case03-site-${key}.svg`;
+  image.alt = stage.alt;
+  document.querySelector('#site-large').href = image.src;
+  document.querySelector('#site-caption').textContent = stage.caption;
+  document.querySelectorAll('[data-site-stage]').forEach(item => item.setAttribute('aria-pressed', String(item === button)));
+ });
+});
