@@ -1,1 +1,120 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 650" role="img" aria-labelledby="title desc"><title id="title">TUYẾN VẬN CHUYỂN &amp; TẬP KẾT</title><desc id="desc">Sơ đồ tầng 12 giả định: thang máy hàng, tuyến vận chuyển nội bộ, điểm tập kết và hai khu thi công A, B.</desc><defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0 0 L6 3 L0 6" fill="none" stroke="#df6328" stroke-width="1.6"/></marker></defs><rect width="1000" height="650" fill="#f1f5f8"/><g font-family="Arial,sans-serif" fill="#102e47"><text x="34" y="43" font-size="23" font-weight="bold">TUYẾN VẬN CHUYỂN &amp; TẬP KẾT</text><text x="34" y="77" font-size="17">Kiểm tra thang máy, cửa và góc rẽ trước khi chọn quy cách vật tư.</text><rect x="55" y="130" width="890" height="355" fill="white" stroke="#102e47" stroke-width="5"/><rect x="80" y="160" width="150" height="160" fill="#e4eaf0" stroke="#9bb0bf"/><text x="98" y="195" font-size="19">KHU ĐANG</text><text x="98" y="225" font-size="19">HOẠT ĐỘNG</text><text x="98" y="266" font-size="16">Phối hợp giờ làm</text><text x="98" y="292" font-size="16">và lối tiếp cận</text><rect x="280" y="160" width="285" height="175" fill="#e8f0f6" stroke="#246993" stroke-width="2"/><rect x="610" y="160" width="305" height="175" fill="#e8f0f6" stroke="#246993" stroke-width="2"/><text x="300" y="194" font-size="23" font-weight="bold">KHU A</text><text x="630" y="194" font-size="23" font-weight="bold">KHU B</text><path d="M310 230 H410 V300 M410 260 H530 M650 230 H750 V300 M750 260 H880" fill="none" stroke="#607f96" stroke-width="8"/><rect x="80" y="355" width="150" height="105" fill="#dce6ed" stroke="#102e47" stroke-width="2"/><text x="95" y="385" font-size="18">THANG MÁY</text><text x="95" y="413" font-size="18">HÀNG</text><text x="95" y="444" font-size="15">Đặt lịch sử dụng</text><rect x="320" y="363" width="180" height="90" fill="#fff0dd" stroke="#b87810" stroke-width="2" stroke-dasharray="7 5"/><text x="335" y="391" font-size="18">ĐIỂM TẬP KẾT</text><text x="335" y="420" font-size="16">Cấp theo từng đợt</text><path d="M235 435 H285 V345 H585 V435 H895" fill="none" stroke="#df6328" stroke-width="5" marker-end="url(#arrow)"/><text x="620" y="470" font-size="16">Tuyến vận chuyển nội bộ dự kiến</text><circle cx="266" cy="352" r="24" fill="white" stroke="#c4424b" stroke-width="3"/><text x="260" y="360" fill="#c4424b" font-size="25">!</text><text x="605" y="390" font-size="18">Kiểm tra góc rẽ / kích thước tấm</text><text x="55" y="534" font-size="20" font-weight="bold">Quy cách vật tư</text><text x="55" y="565" font-size="17">Kiểm tra tuyến và kích thước.</text><text x="530" y="534" font-size="20" font-weight="bold">Kế hoạch giao hàng</text><text x="530" y="565" font-size="17">Xác nhận lịch, khối lượng từng đợt.</text><text x="34" y="613" font-size="16">Sơ đồ giả định phục vụ bài học · Không phải mặt bằng hoặc biện pháp thi công được phê duyệt</text></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 650" role="img" aria-labelledby="title desc">
+<title id="title">VẬN CHUYỂN &amp; TẬP KẾT</title>
+<desc id="desc">Sơ đồ giả định 5 bước: xe tải vào bến dỡ hàng tầng trệt, dỡ hàng, đưa lên tầng 12 bằng thang máy hàng, đi qua hành lang có góc rẽ cần kiểm tra chiều dài tấm, đến điểm tập kết rồi cấp theo đợt cho khu A và khu B.</desc>
+<defs>
+<marker id="arw" markerUnits="userSpaceOnUse" markerWidth="18" markerHeight="16" refX="12" refY="8" orient="auto"><path d="M0 0 L16 8 L0 16 Z" fill="#df6328"/></marker>
+<marker id="arwT" markerUnits="userSpaceOnUse" markerWidth="14" markerHeight="12" refX="9" refY="6" orient="auto"><path d="M0 0 L12 6 L0 12 Z" fill="#087f72"/></marker>
+<pattern id="hatch" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="8" height="8" fill="#eef1f4"/><line x1="0" y1="0" x2="0" y2="8" stroke="#c9d3db" stroke-width="3"/></pattern>
+</defs>
+<rect width="1000" height="650" fill="#f1f5f8"/>
+<g font-family="Arial,sans-serif" fill="#102e47">
+
+<text x="30" y="42" font-size="23" font-weight="bold">VẬN CHUYỂN &amp; TẬP KẾT</text>
+<text x="30" y="72" font-size="16">Đi theo vật tư từ xe tải đến khu thi công: mỗi điểm chuyển tiếp là một giả định cần xác nhận trước khi chốt giá.</text>
+
+<!-- ===== GROUND FLOOR PANEL ===== -->
+<text x="30" y="108" font-size="13" font-weight="bold" fill="#607f96" letter-spacing="1">TẦNG TRỆT · LOADING DOCK</text>
+<rect x="30" y="118" width="265" height="422" fill="white" stroke="#102e47" stroke-width="3"/>
+<!-- street -->
+<rect x="31" y="470" width="263" height="69" fill="#d7dee4"/>
+<line x1="31" y1="505" x2="294" y2="505" stroke="white" stroke-width="3" stroke-dasharray="14 10"/>
+<text x="180" y="530" font-size="13" fill="#4f6b80">Đường vào</text>
+<!-- dock -->
+<rect x="45" y="250" width="235" height="78" fill="url(#hatch)" stroke="#9bb0bf"/>
+<text x="150" y="278" font-size="14" font-weight="bold">BẾN DỠ HÀNG</text>
+<text x="150" y="298" font-size="12">kiểm đếm · bảo vệ</text>
+<text x="150" y="314" font-size="12">tấm khi dỡ</text>
+<!-- goods lift ground -->
+<rect x="190" y="135" width="90" height="90" fill="#dce6ed" stroke="#102e47" stroke-width="2"/>
+<line x1="190" y1="135" x2="280" y2="225" stroke="#9bb0bf"/><line x1="280" y1="135" x2="190" y2="225" stroke="#9bb0bf"/>
+<rect x="198" y="167" width="74" height="26" fill="#dce6ed"/>
+<text x="235" y="185" font-size="13" font-weight="bold" text-anchor="middle">TM HÀNG</text>
+<!-- truck (reverses into dock) -->
+<g>
+<animateTransform attributeName="transform" type="translate" values="0 62;0 62;0 0;0 0" keyTimes="0;0.15;0.6;1" dur="6s" repeatCount="indefinite"/>
+<rect x="72" y="331" width="62" height="108" rx="3" fill="white" stroke="#102e47" stroke-width="2.5"/>
+<line x1="80" y1="345" x2="126" y2="345" stroke="#9bb0bf"/>
+<text x="103" y="392" font-size="11" text-anchor="middle" font-weight="bold">TẤM</text>
+<text x="103" y="406" font-size="11" text-anchor="middle">vách/trần</text>
+<rect x="77" y="441" width="52" height="28" rx="5" fill="#246993"/>
+<rect x="82" y="460" width="42" height="6" rx="2" fill="#cfe1ee"/>
+<rect x="66" y="350" width="6" height="16" fill="#102e47"/><rect x="134" y="350" width="6" height="16" fill="#102e47"/>
+<rect x="66" y="410" width="6" height="16" fill="#102e47"/><rect x="134" y="410" width="6" height="16" fill="#102e47"/>
+</g>
+<!-- ground route -->
+<path d="M103 326 V238 H185" fill="none" stroke="#df6328" stroke-width="5" marker-end="url(#arw)"/>
+<!-- badges ground -->
+<circle cx="168" cy="420" r="15" fill="#df6328"/><text x="168" y="426" font-size="16" font-weight="bold" fill="white" text-anchor="middle">1</text>
+<text x="190" y="416" font-size="12" font-weight="bold">Xe vào dock</text>
+<text x="190" y="432" font-size="12">theo khung giờ</text>
+<circle cx="60" cy="238" r="15" fill="#df6328"/><text x="60" y="244" font-size="16" font-weight="bold" fill="white" text-anchor="middle">2</text>
+
+<!-- ===== VERTICAL LINK ===== -->
+<path d="M282 180 H372" fill="none" stroke="#df6328" stroke-width="4" stroke-dasharray="8 6" marker-end="url(#arw)"/>
+<text x="327" y="166" font-size="12" font-weight="bold" fill="#df6328" text-anchor="middle">LÊN</text>
+<text x="327" y="203" font-size="12" font-weight="bold" fill="#df6328" text-anchor="middle">TẦNG 12</text>
+
+<!-- ===== LEVEL 12 PANEL ===== -->
+<text x="375" y="108" font-size="13" font-weight="bold" fill="#607f96" letter-spacing="1">TẦNG 12 · MẶT BẰNG GIẢ ĐỊNH</text>
+<rect x="375" y="118" width="595" height="422" fill="white" stroke="#102e47" stroke-width="5"/>
+<!-- lift L12 -->
+<rect x="385" y="135" width="90" height="90" fill="#dce6ed" stroke="#102e47" stroke-width="2"/>
+<line x1="385" y1="135" x2="475" y2="225" stroke="#9bb0bf"/><line x1="475" y1="135" x2="385" y2="225" stroke="#9bb0bf"/>
+<rect x="393" y="167" width="74" height="26" fill="#dce6ed"/>
+<text x="430" y="185" font-size="13" font-weight="bold" text-anchor="middle">TM HÀNG</text>
+<!-- corridor -->
+<path d="M475 150 H770 V410 H710 V210 H475 Z" fill="#f6f8fa" stroke="#9bb0bf" stroke-width="2"/>
+<text x="560" y="203" font-size="12" fill="#4f6b80">Hành lang chung</text>
+<!-- zone A -->
+<rect x="385" y="240" width="310" height="285" fill="#e8f0f6" stroke="#246993" stroke-width="2"/>
+<text x="405" y="275" font-size="22" font-weight="bold">KHU A</text>
+<path d="M415 330 H520 V400 M520 360 H660" fill="none" stroke="#607f96" stroke-width="7"/>
+<!-- zone B -->
+<rect x="785" y="135" width="170" height="270" fill="#e8f0f6" stroke="#246993" stroke-width="2"/>
+<text x="805" y="170" font-size="22" font-weight="bold">KHU B</text>
+<path d="M810 230 H900 V300 M900 260 H935" fill="none" stroke="#607f96" stroke-width="7"/>
+<!-- active tenant -->
+<rect x="840" y="420" width="115" height="105" fill="#e4eaf0" stroke="#9bb0bf"/>
+<text x="852" y="448" font-size="13" font-weight="bold">KHU ĐANG</text>
+<text x="852" y="465" font-size="13" font-weight="bold">HOẠT ĐỘNG</text>
+<text x="852" y="490" font-size="11">giữ lối đi,</text>
+<text x="852" y="505" font-size="11">hạn chế ồn</text>
+<!-- staging -->
+<rect x="710" y="420" width="120" height="105" fill="#fff0dd" stroke="#b87810" stroke-width="2.5" stroke-dasharray="7 5"/>
+<text x="770" y="452" font-size="13" font-weight="bold" text-anchor="middle">ĐIỂM</text>
+<text x="770" y="469" font-size="13" font-weight="bold" text-anchor="middle">TẬP KẾT</text>
+<text x="770" y="492" font-size="11" text-anchor="middle">diện tích</text>
+<text x="770" y="506" font-size="11" text-anchor="middle">hạn chế</text>
+
+<!-- main route L12 -->
+<path d="M478 180 H740 V430" fill="none" stroke="#df6328" stroke-width="5" marker-end="url(#arw)"/>
+<!-- moving load -->
+<circle r="7" fill="#df6328" stroke="white" stroke-width="2"><animateMotion dur="5s" repeatCount="indefinite" path="M478 180 H740 V430"/></circle>
+
+<!-- panel clash at corner -->
+<rect x="680" y="174" width="120" height="12" fill="#fbe7e9" stroke="#c4424b" stroke-width="2" stroke-dasharray="5 3" transform="rotate(45 740 180)"/>
+<circle cx="740" cy="180" r="22" fill="none" stroke="#c4424b" stroke-width="3"/>
+
+<!-- feeders -->
+<path d="M710 488 H662" fill="none" stroke="#087f72" stroke-width="3.5" stroke-dasharray="6 5" marker-end="url(#arwT)"/>
+<text x="560" y="483" font-size="12" font-weight="bold" fill="#087f72">Đợt 1 → Khu A</text>
+<path d="M800 418 L825 402 L835 395" fill="none" stroke="#087f72" stroke-width="3.5" stroke-dasharray="6 5" marker-end="url(#arwT)"/>
+<text x="845" y="396" font-size="12" font-weight="bold" fill="#087f72">Đợt 2 → Khu B</text>
+
+<!-- badges L12 -->
+<circle cx="400" cy="150" r="15" fill="#df6328"/><text x="400" y="156" font-size="16" font-weight="bold" fill="white" text-anchor="middle">3</text>
+<circle cx="694" cy="136" r="15" fill="#c4424b"/><text x="694" y="142" font-size="16" font-weight="bold" fill="white" text-anchor="middle">4</text>
+<circle cx="725" cy="540" r="15" fill="#df6328"/><text x="725" y="546" font-size="16" font-weight="bold" fill="white" text-anchor="middle">5</text>
+
+<!-- ===== STEP LEGEND ===== -->
+<g font-size="13">
+<rect x="30" y="556" width="940" height="62" fill="white" stroke="#ccd8df"/>
+<text x="44" y="580" font-weight="bold" fill="#df6328">1 · Xe tải vào dock</text><text x="44" y="601">Khung giờ giao, cỡ xe</text>
+<text x="230" y="580" font-weight="bold" fill="#df6328">2 · Dỡ hàng</text><text x="230" y="601">Kiểm đếm, bảo vệ tấm</text>
+<text x="416" y="580" font-weight="bold" fill="#df6328">3 · Thang máy hàng</text><text x="416" y="601">Cabin, tải trọng, lịch đặt</text>
+<text x="602" y="580" font-weight="bold" fill="#c4424b">4 · Góc rẽ hành lang</text><text x="602" y="601">Tấm dài không xoay lọt?</text>
+<text x="788" y="580" font-weight="bold" fill="#df6328">5 · Tập kết, cấp đợt</text><text x="788" y="601">Khối lượng mỗi đợt A/B</text>
+</g>
+<text x="30" y="640" font-size="13" fill="#4f6b80">Sơ đồ giả định phục vụ bài học · Không phải mặt bằng hoặc biện pháp thi công được phê duyệt</text>
+</g>
+</svg>

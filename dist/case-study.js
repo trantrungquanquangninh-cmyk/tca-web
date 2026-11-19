@@ -45,7 +45,7 @@ document.querySelectorAll('[data-stair-stage]').forEach(button => {
  });
 });
 const siteStages = {
- '1': { alt: 'Sơ đồ tầng 12: thang máy hàng, tuyến vận chuyển, điểm tập kết và các khu A, B', caption: 'Làm rõ tuyến vận chuyển và vị trí tập kết trước khi chọn quy cách vật tư. Bấm hình để xem lớn.' },
+ '1': { alt: 'Sơ đồ 5 bước: xe tải vào bến dỡ hàng, dỡ hàng, thang máy hàng lên tầng 12, góc rẽ hành lang cần kiểm tra chiều dài tấm, điểm tập kết cấp đợt cho khu A, B', caption: 'Đi theo vật tư qua 5 điểm chuyển tiếp — từ xe tải đến khu thi công — trước khi chọn quy cách tấm. Bấm hình để xem lớn.' },
  '2': { alt: 'Sơ đồ phân khu thi công: đội A triển khai khu A, khu B chờ điều phối, vật tư cấp theo đợt', caption: 'Phân khu và trình tự dự kiến để cùng Site Manager rà soát. Bấm hình để xem lớn.' },
  '3': { alt: 'Sơ đồ briefing cho đội mới: rà soát khu A trước khi chuyển bước và hướng dẫn phạm vi tại khu B', caption: 'Dùng chung hình ảnh và phiên bản để briefing đội mới, xác nhận phạm vi và bước tiếp theo. Bấm hình để xem lớn.' }
 };
@@ -59,6 +59,8 @@ document.querySelectorAll('[data-site-stage]').forEach(button => {
   image.alt = stage.alt;
   document.querySelector('#site-large').href = image.src;
   document.querySelector('#site-caption').textContent = stage.caption;
+  const video = document.querySelector('#site-video');
+  if (video) video.hidden = key !== '1';
   document.querySelectorAll('[data-site-stage]').forEach(item => item.setAttribute('aria-pressed', String(item === button)));
  });
 });
