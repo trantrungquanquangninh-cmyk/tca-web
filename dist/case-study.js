@@ -26,3 +26,21 @@ document.querySelectorAll('[data-revision]').forEach(button => {
   document.querySelectorAll('[data-revision]').forEach(item => item.setAttribute('aria-pressed', String(item === button)));
  });
 });
+const stairStages = {
+ '1': { alt: 'Concept cầu thang thép: khung dầm thang, điểm đỡ và chiếu nghỉ', caption: 'Lớp khung thép: thảo luận cấu kiện chính, điểm đỡ và liên kết.' },
+ '2': { alt: 'Concept cầu thang thép có thêm bậc thang và chiếu nghỉ trên khung đỡ', caption: 'Bổ sung bậc và chiếu nghỉ: làm rõ phạm vi gia công, cung cấp và lắp đặt.' },
+ '3': { alt: 'Sơ đồ concept 3D cầu thang thép với khung đỡ, bậc, chiếu nghỉ và lan can màu cam', caption: 'Phương án tổng thể: khung, bậc, chiếu nghỉ và lan can. Bấm hình để xem lớn.' }
+};
+document.querySelectorAll('[data-stair-stage]').forEach(button => {
+ button.addEventListener('click', () => {
+  const key = button.dataset.stairStage;
+  const stage = stairStages[key];
+  if (!stage) return;
+  const image = document.querySelector('#stair-model');
+  image.src = `assets/case02-stair-${key}.svg`;
+  image.alt = stage.alt;
+  document.querySelector('#stair-large').href = image.src;
+  document.querySelector('#stair-caption').textContent = stage.caption;
+  document.querySelectorAll('[data-stair-stage]').forEach(item => item.setAttribute('aria-pressed', String(item === button)));
+ });
+});
